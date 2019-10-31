@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photo explorer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300|Rubik:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="landing">
+    <main>
+        <section class="jumbotron">
+            <div class="jumbotron__logo">
+                <img src="images/photo-explorer-logo.png" alt="Photo explorer logo">
+            </div>
+            <div class="jumbotron__heading">
+                <h1>Explore the best of photography</h1>
+                <p class="lead-text">Start searching the photos you love</p>
+            </div>
+
+            <div class="search-box landing__search">
+                <form>
+                    <input type="text" class="search-box__input" name="keyword" id="" placeholder="Just type anything e.g cats">
+                    <button type="submit" class="search-box__submit"><span data-feather="search"></span></button>
+                </form>
+            </div> 
+        </section>
+    </main>
+
+    <script src="./scripts/feather.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

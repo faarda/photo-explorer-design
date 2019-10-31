@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photo explorer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300|Rubik:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="results">
+    <header class="header">
+        <div class="header__main">
+            <div class="header__logo">
+                <img src="./images/photo-explorer-logo.png" alt="Photo explorer logo">
+            </div>
+            <div class="header__search">
+                <div class="search-box">
+                    <form>
+                        <input type="text" class="search-box__input" name="keyword" id=""
+                            placeholder="Just type anything e.g cats">
+                        <button type="submit" class="search-box__submit"><span data-feather="search"></span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="header__sub">
+            <p class="results__text">Search results for: Technology</p>
+            <div class="results__action">
+                <div class="sort-results">
+                    <a>
+                        <span data-feather="sliders"></span> <span class="h-sm">Sort by views</span>
+                    </a>
+                </div>
+                <div class="pagination">
+                    <div class="wrapper">
+                        Page 1: <button class="pagination__btn" disabled><span data-feather="chevron-left"></span></button>
+                        <button class="pagination__btn"><span data-feather="chevron-right"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="results__main">
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+                <div class="result__image"><img src="./images/result.jpg" alt=""></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-container" id="modal">
+        <div class="image-modal">
+            <span class="image-modal__close"><span data-feather="x"></span></span>
+            <div class="image-modal__body">
+                <div class="image-modal__image">
+                    <img src="./images/result2.jpg" alt="">
+                </div>
+                <div class="image-modal__meta">
+                    <div class="authour">
+                        <div class="authour__image">
+                            <img src="./images/author.png" alt="">
+                        </div>
+                        <div class="authour__details">
+                            <h4>John Doe</h4>
+                            <span>Photographer</span>
+                        </div>
+                    </div>
+                    <a download href="./images/result.jpg" class="download">Download&nbsp;&nbsp; <span data-feather="download"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/feather.js"></script>
+    <script>
+        feather.replace();
+        // document.addEventListener('documen', function(){
+            let resultImage = document.querySelectorAll(".result__image");
+
+            for (const el of resultImage) {
+                el.addEventListener('click', e => {
+                    showModal();
+                });
+            }
+        // });
+        
+        let closeModalBtn = document.querySelector(".image-modal__close");
+
+        closeModalBtn.addEventListener('click', e => {
+            closeModal();
+        });
+
+        function showModal(){
+            let modal = document.getElementById("modal");
+
+            modal.style.display = 'block';
+        }
+
+        function closeModal(){
+            let modal = document.getElementById("modal");
+
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

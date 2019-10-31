@@ -1,0 +1,62 @@
+.search-box {
+    background: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.25);
+    height: 5rem;
+    overflow: hidden;
+    padding: 7px 10px 7px 15px;
+
+    @include lg{
+        height: 6rem;
+    }
+
+    form {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    &__input {
+        flex: 1;
+        outline: none;
+        border: 0;
+        height: 100%;
+        font-size: 18px;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    &__input::placeholder {
+        color: $dark-light;
+        font-size: 1.4rem;
+    }
+
+    &__submit {
+        background: transparent;
+        outline: none;
+        border: none;
+        color: $primary;
+        display: inline-block;
+        padding: 7px 8px;
+        line-height: 15px;
+        cursor: pointer;
+        transition: .5s all;
+
+        .feather {
+            width: 18px;
+            height: 18px;
+            // transform: translateY(2px);
+        }
+
+        &:hover {
+            color: #fff;
+            background: $primary;
+            border-radius: 5px;
+        }
+    }
+
+
+
+}

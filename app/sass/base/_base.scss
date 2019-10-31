@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: $dark;
+    max-width: 100%;
+    overflow-X: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button{
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.h-sm{
+    @include sm{
+        display: none;
+    }
+}

@@ -1,0 +1,49 @@
+.landing{
+    main{
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to bottom, rgba($dark, 0.6), rgba($dark, 0.6)), url('/app/images/landing-bg.jpg');
+        display: grid;
+        grid-template-columns: minmax(70%, 500px);
+        align-content: center;
+        justify-content: center;
+
+        @include sm{
+           grid-template-columns: 100%;
+           padding: 1rem 2rem;
+        }
+    }
+
+    .jumbotron{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -50px;
+
+        &__logo{
+            width: 10rem;
+            height: 10rem;
+            margin-bottom: 5rem;
+
+            @include sm{
+                width: 7rem;
+                height: 7rem;
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+        &__heading{
+            color: $light;
+            text-align: center;
+            margin-bottom: 3rem;
+
+            h1{
+                margin-bottom: .7rem;
+            }
+        }
+    }
+}
